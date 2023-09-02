@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
+    <script>
+      const rootUrl = "https://raw.githubusercontent.com/daydreamer-json/booksArcRepo/main"
+      var book = ePub(`${rootUrl}/media/epub/04ede7e7-0591-4aa1-89ff-80dc5d088638/OEBPS/package.opf`);
+      var rendition = book.renderTo("bookRenderArea", {manager: "continuous", flow: "scrolled", width: "100%", height: "100%"});
+      var displayed = rendition.display();
+    </script>
+  </head>
+  <body>
+    <div id="bookRenderArea">
+    </div>
+  </body>
+</html>
